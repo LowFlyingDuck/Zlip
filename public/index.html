@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="icon" href="./images/Z.png" type="image/png">
+  <title>Zlip</title>
+</head>
+
+<body>
+
+  <nav>
+    <div class="logo-container">
+      <a href="index.html"><img src="images/ZLIP.png" alt="logo"></a>
+    </div>
+
+    <div class="ul-container">
+      <ul>
+        <li><a href="#">Our Work</a></li>
+        <li><a href="#">Science</a></li>
+        <li><a href="#">The Program</a></li>
+        <li><a href="#">Pricing</a></li>
+        <li class="join-us">
+          <a href="#">Join Us</a>
+          <div class="signup-form">
+            <div class="content">
+              <form action="javascript: login();">
+                <h4>Log In to your Zlip account</h4>
+                <div id="login-failed">
+                  <h4>Login was unsuccessful</h4>
+                  <p>Either the email address or the password was wrong. Try again or become a member.</p>
+                </div>
+                <div class="outer">
+                  <div class="inner">
+                    <input type="email" id="email-forum" placeholder="email address" autocomplete="off" />
+                    <input type="password" id="password" placeholder="password" autocomplete="off" />
+                  </div>
+                  <button type="submit" class="blue-filled">Sign In</button>
+                </div>
+              </form>
+              <h4>Sign Up for the chargeable Zlip program</h4>
+              <div class="outer">
+                <input type="email" id="email-program" placeholder="email address" autocomplete="off" />
+                <button class="blue-filled" onclick="javascript: test()">Continue</button>
+                <script src="./script.js" type="text/javascript"></script>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="title">
+    <h1>The <span>Night</span> makes the <span>Day</span></h1>
+    <h3>A good sleep is worth a good week</h3>
+    <div class="buttons">
+      <button class="red-filled" onclick="javascript: window.open('./login.html', '_top')">Log In</button>
+      <button class="blue-filled" onclick="javascript: window.open('./signup.html', '_top')">Sign Up</button>
+    </div>
+  </div>
+
+  <section class="red" id="first">
+    <div class="content">
+      <h3>Sleep is essential for your</h3>
+      <ul>
+        <li>
+          <div class="element">
+            <img src="images/Mental Health.svg" alt="Symbol Physical Health">
+            <h4>Mental Health</h4>
+            <p>Without sleeping, your Brain doesn't get the rest it needs to recover from the stressful everyday life these days. In order to make sure not to be left with permanent psychological damage,
+              you have to give it the sleep it needs.</p>
+          </div>
+        </li>
+        <li>
+          <div class="element">
+            <img src="images/Physical Health.svg" alt="Symbol Physical Health">
+            <h4>Physical Health</h4>
+            <p>The same thing as in Mental Health applies to Physical Helth, too. If your Body doesn't receive the nightly rest, it will let you down at some point. </p>
+          </div>
+        </li>
+        <li>
+          <div class="element">
+            <img src="images/Brain Processing.svg" alt="Symbol Physical Health">
+            <h4>Brain Processing</h4>
+            <p>Your Brain doesn't only use the night for rest, it also needs it to process all the experiences and situations, that you faced throughout the day. By dreaming,
+              your brain trains for real life problems.</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="blue">
+    <div class="content">
+      <h3></h3>
+    </div>
+  </section>
+
+  <div class="background-container">
+    <img src="images/Background.svg" alt="wavy background">
+  </div>
+
+</body>
+
+</html>

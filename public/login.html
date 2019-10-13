@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/login.css">
+  <title>Zlip</title>
+</head>
+
+<body>
+
+  <nav>
+    <div class="logo-container">
+      <a href="index.html"><img src="images/ZLIP.png" alt="logo"></a>
+    </div>
+
+    <div class="ul-container">
+      <ul>
+        <li><a href="login.html">Home</a></li>
+        <li><a href="#">Science</a></li>
+        <li><a href="#">Courses</a></li>
+        <li><a href="#">Dashboard</a></li>
+        <li class="join-us" id="logout">
+          <a href="javascript:logout()">Log Out</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div id="main">
+    <div id="left">
+      <h3>Last Courses</h3>
+      <div class="inner">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+    <div id="right-top">
+      <div class="inner">
+
+      </div>
+    </div>
+    <div id="right-bottom-right">
+      <div class="inner">
+
+      </div>
+    </div>
+    <div id="right-bottom-left">
+      <div class="inner">
+
+      </div>
+    </div>
+  </div>
+
+  <div class="background-container">
+    <img src="images/Background.svg" alt="wavy background">
+  </div>
+
+  <script src="./script.js" type="text/javascript"></script>
+  <script>
+  
+  var target = document.getElementById('test');
+  async function getData(data, email, password) {
+    var options = {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        'email': email,
+        'password': password,
+        'data': data
+      })
+    }
+    var receive = await fetch('/accountData', options);
+    var result = await receive.json();
+    return result;
+    target.textContent = result.response;
+  }
+  console.log(getData('password',sessionStorage.getItem('email'),sessionStorage.getItem('password')));
+
+  </script>
+</body>
+
+</html>
